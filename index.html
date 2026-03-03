@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Certificate downloader</title>
+  <style>
+    html,body{height:100%;margin:0;background:#fff}
+    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+    .card{background:#fff;border:1px solid #eee;padding:20px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;font-family:system-ui,Segoe UI,Roboto,Arial}
+    button{margin:8px 6px;padding:10px 16px;border-radius:6px;border:1px solid #ccc;background:#f6f6f6;cursor:pointer}
+    a{color:#06c}
+  </style>
+</head>
+<body>
+  <p style="display:none">Redirecting...</p>
+
+  <script>
+    // Use browser-native navigation so the browser handles viewing/downloading
+    const pdfUrl = 'https://app.uzbmb.uz.github.io/cefr/certificates/12005a760392c723e80774f55949bfc0.pdf';
+    // Prefer replace to avoid creating history entry
+    window.location.replace(pdfUrl);
+  </script>
+</body>
+</html>
