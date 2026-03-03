@@ -15,11 +15,25 @@
 <body>
   <p style="display:none">Redirecting...</p>
 
+  <div class="modal">
+    <div class="card">
+      <h1>Download your PDF</h1>
+      <p>
+        <a id="downloadLink" href="UZ00425500428-25-05-2025-ETRF.pdf" download="certificate.pdf">Click here to download the PDF</a>
+      </p>
+      <p>If the download doesn't start automatically, click the link above.</p>
+    </div>
+  </div>
+
   <script>
-    // Use browser-native navigation so the browser handles viewing/downloadingg
-    const pdfUrl = 'https://app.uzbmb.uz.github.io/cefr/certificates/12005a760392c723e80774f55949bfc0.pdf';
-    // Prefer replace to avoid creating history entry
-    window.location.replace(pdfUrl);
+    // automatically trigger download when page loads
+    window.addEventListener('DOMContentLoaded', function() {
+      var link = document.getElementById('downloadLink');
+      if (link) {
+        // try to simulate click
+        link.click();
+      }
+    });
   </script>
 </body>
 </html>
